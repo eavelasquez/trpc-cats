@@ -29,7 +29,6 @@ const trpcRouter = trpc.router()
       return { cat, message: `Found cat ${cat.name}` };
     },
   })
-
   .query('list', {
     output: z.object({ cats: Cats, total: z.number(), message: z.string() }),
     async resolve() {
@@ -43,7 +42,6 @@ const trpcRouter = trpc.router()
       return { cats, total: cats.length, message: 'Cats found' };
     },
   })
-
   .mutation('create', {
     input: z.object({ name: z.string().max(50) }),
     output: z.object({ cat: Cat, message: z.string() }),
@@ -54,7 +52,6 @@ const trpcRouter = trpc.router()
       return { cat: newCat, message: 'Cat created' };
     },
   })
-
   .mutation('update', {
     input: z.object({ id: z.number(), name: z.string().max(50) }),
     output: z.object({ cat: Cat, message: z.string() }),
@@ -73,7 +70,6 @@ const trpcRouter = trpc.router()
       return { cat, message: 'Cat updated' };
     },
   })
-
   .mutation('delete', {
     input: z.object({ id: z.number() }),
     output: z.object({ id: z.number(), message: z.string() }),
