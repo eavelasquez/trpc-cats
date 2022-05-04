@@ -1,9 +1,10 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Server is a Node.js application with TypeScript.",
+  "main": "build/index.js",
   "scripts": {
+    "start": "bash ./run.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
