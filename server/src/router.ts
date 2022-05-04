@@ -75,10 +75,10 @@ const trpcRouter = trpc.router()
   })
 
   .mutation('delete', {
-    input: z.number(),
+    input: z.object({ id: z.number() }),
     output: z.object({ id: z.number(), message: z.string() }),
     async resolve(req) {
-      const cat = cats.find((cat) => cat.id === req.input);
+      const cat = cats.find((cat) => cat.id === req.input.id);
 
       if (!cat) {
         throw new trpc.TRPCError({
@@ -87,9 +87,9 @@ const trpcRouter = trpc.router()
         });
       }
 
-      cats = cats.filter((cat) => cat.id !== req.input);
+      cats = cats.filter((cat) => cat.id !== req.input.id);
 
-      return { id: req.input, message: 'Cat deleted' };
+      return { id: req.input.id, message: 'Cat deleted' };
     },
   });
 
