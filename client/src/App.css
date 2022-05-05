@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+.Create button {
+  margin-top: 10px;
+}
+
+.Detail {
+  margin-top: 10px;
+}
+
+.List span {
+  padding: 5px;
+}

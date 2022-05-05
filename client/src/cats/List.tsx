@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import type { Cat } from '../../../server/src/router';
+
 import { trpc } from '../App';
+import type { Cat } from '../../../server/src/router';
 
 const List = (props: { setDetail: (id: number) => void }) => {
   const [error, setError] = useState('');
@@ -24,10 +25,12 @@ const List = (props: { setDetail: (id: number) => void }) => {
       <div key={cat.id}>
         <span>{cat.id}</span>
         <span>{cat.name}</span>
-        <button onClick={() => props.setDetail.bind(null, cat.id)}>
-          Detail
-        </button>
-        <button onClick={() => handleSubmit.bind(null, cat.id)}>Delete</button>
+        <span>
+          <button onClick={() => props.setDetail(cat.id)}>Detail</button>
+        </span>
+        <span>
+          <button onClick={() => handleSubmit(cat.id)}>Delete</button>
+        </span>
       </div>
     );
   };
