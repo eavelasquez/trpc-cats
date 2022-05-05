@@ -1,4 +1,4 @@
-# tRPC Example
+# tRPC Cats
 
 ## About
 
