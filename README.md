@@ -86,3 +86,25 @@ To test the server, run the following commands:
     ```
     {"id":null,"result":{"type":"data","data":{"id":56404,"message":"Cat deleted"}}}
     ```
+
+## Client
+
+Client is a React application with TypeScript. This application uses the tRPC library to send requests to the server.
+
+To run the client, run the following commands:
+
+```
+cd client && npm install && npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+![client-app](assets/client-app.png)
+
+To builds the client, run the following commands:
+
+```
+cd client && npm run build
+```
+
+It will create a folder called `build` with the client built. The build is minified and optimized for production.
