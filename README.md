@@ -2,13 +2,13 @@
 
 ## About
 
-This is an example of a tRPC server and client. Server persists data in a memory to manage kittens, and client sends data to the server.
+This is an example of a tRPC server and client with cats. Server persists data in a memory to manage kittens, and client sends data to the server.
 
 To clone this repository, run:
 
 ```
-git clone https://github.com/eavelasquez/trpc-example.git
-cd trpc-example
+git clone https://github.com/eavelasquez/trpc-cats.git
+cd trpc-cats
 ```
 
 ## Folder structure
@@ -22,6 +22,20 @@ cd trpc-example
 │   ├── run.sh
 │   └── tsconfig.json
 ├── client
+│   ├── public
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── src
+│   │   ├── cats
+│   │   │   ├── Create.tsx
+│   │   │   ├── Detail.tsx
+│   │   │   └── List.tsx
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   └── index.tsx
+│   ├── package.json
+│   └── tsconfig.json
 └── README.md
 ```
 
